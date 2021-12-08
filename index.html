@@ -13,45 +13,48 @@
       crossorigin="anonymous"
     />
 
-    <!-- FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-
     <!-- Local CSS -->
     <link rel="stylesheet" href="index.css" />
 
-    <title>News Of The Day</title>
+    <title>Wiki-Ash Live Search</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row mt-5" id="quoteContainer">
-        <div class="col-sm-10 offset-sm-1">
-            <div id="quote>
-                    <i class="fas fa-quote-left"></i>
-                    <span class="quoteBody" id="quoteBody" > Anime Quote Generator. Click "Show" to start</span> 
-            </div>
-            <br>
-            <!-- Loader -->
-            <div class="loader" id="loader" hidden></div>
-            <p class="text-right">
-                <strong class="quoteAnimeCharacter" id="quoteAnimeCharacter"></strong>
-            </p>
-
-            <p class="quoteAnime text-right" id="quoteAnime"></p>
-            <hr />
-            <button class="btn btn-success read">Show</button>
-            <a class="disabled btn btn-info float-right tweetQuote">
-                <i class="fab fa-twitter"> Tweet</i>
-            </a>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 jumbotron text-center">
+          <h1>Wiki-Ash</h1>
+          <p><i>Live Search Results From Wikipedia</i></p>
+          <hr />
+          <div class="searchBox">
+            <input
+              type="text"
+              class="form-control"
+              id="search"
+              placeholder="Something you want to know? Type it here!"
+              name="search"
+            />
+            <br /><br />
+            <button class="btn btn-primary random">Read random wiki</button>
+          </div>
         </div>
+
+        <div class="col-sm-8 col-sm-offset-2 searchResults">
+          <div id="update"></div>
+        </div>
+      </div>
     </div>
 
+    <div class="container-fluid embed-responsive embed-responsive-16by9">
+      <div class="row">
+        <iframe src="" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
     </div>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -62,15 +65,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- JQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
     <script src="index.js"></script>
-    <script src="script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
